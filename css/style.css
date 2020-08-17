@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    outline: none !important;
+}
+
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    transition: 0.4s;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sticky{
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1 );
+    background-color: #fff;
+    padding: 20px 100px;
+}
+
+
+.header .logo{
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.sticky .logo{
+    color: #111;
+}
+
+
+.header ul{
+    position: relative;
+    display: flex;
+}
+
+.header ul li{
+    position: relative;
+    list-style: none;
+}
+
+.header ul li a{
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    margin: 0px 15px;
+}
+
+.sticky ul li a{
+    color: #111;
+}
+
+.header ul li a::after{
+    background: none repeat scroll 0 0 transparent;
+	content: "";
+	display: block;
+	height: 2px;
+	left: 50%;
+	position: absolute;
+	background: #fff;
+	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+	width: 0;
+}
+
+.header ul li a:hover::after{
+    width: 100%;
+    left: 0;
+}
+
+.sticky ul li a::after{
+    background: #111;
+}
+
+section{
+    padding: 100px;
+}
+
+.banner{
+    position: relative;
+    min-height: 100vh;
+    background: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner h2{
+    font-size: 3em;
+    line-height: 1.5em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.banner h2 span{
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.banner h3{
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.btn{
+    position: relative;
+    background-color: #2196f3;
+    color: white;
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover{
+    background-color: #046abe;
+}
+
+
+.heading{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #111111;
+}
+
+.heading h2{
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contentBx{
+    padding-right: 30px;
+}
+
+.contentBx h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.w50{
+    min-width: 50%;
+}
+
+img{
+    max-width: 100%;
+    user-select: none;
+}
+
+.services{
+    background: #111111;
+}
+
+.heading.white{
+    color: #ffffff;
+}
+
+.services .content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.services .content .serviceBx{
+    padding: 40px 20px;
+    background: #222;
+    color: #fff;
+    max-width: 340px;
+    margin: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.services .content .serviceBx:hover{
+    background: #2196f3;
+}
+
+.services .content .serviceBx img{
+    max-width: 80px;
+    filter: invert(1);
+}
+
+.services .content .serviceBx h2{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.work .content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.work .content .workBx{
+    width: 50%;
+    padding: 20px;
+}
+
+
+.testimonial{
+    background: #f7f7f7;
+}
+
+.testimonial .content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.testimonial .content .testimonialBx{
+    max-width: calc(50% - 40px);
+    border-radius: 5px;
+    padding: 30px 40px;
+    margin: 20px;
+    background: #2196f3;
+}
+
+.testimonial .content .testimonialBx p{
+    color: #fff;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.testimonial .content .testimonialBx h3{
+    margin-top: 40px;
+    text-align: end;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1em;
+}
+
+.testimonial .content .testimonialBx h3 span{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.contact{
+    background: #111;
+}
+
+.contactInfo{
+    min-width: 40%;
+}
+
+.contactInfoBx{
+    position: relative;
+}
+
+.contactInfoBx .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.contactInfoBx .box .icon{
+    min-width: 40px;
+    padding-top: 4px;
+    color: #fff;
+    display: flex-start;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.contactInfoBx .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.contactInfoBx .box a{
+    color: white;
+}
+
+.contactInfoBx .box .text h3{
+    font-weight: 500;
+    color: #2196f3;
+    margin-bottom: 0;
+}
+
+.formBx{
+    min-width: 60%;
+}
+
+.formBx form{
+    display: flex;
+    flex-direction: column;
+}
+
+.formBx form h3,
+.contactInfo h3{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.formBx form input, textarea{
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    color: #fff;
+    outline: none;
+    background: #222;
+    resize: vertical;
+}
+
+.formBx form input::placeholder, textarea::placeholder{
+    user-select: none;
+    color: #999;
+}
+
+.formBx form textarea{
+    min-height: 200px;
+}
+
+.formBx form input[type="submit"]{
+    max-width: 100px;
+    background: #2196f3;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    letter-spacing: 2px;
+    transition: all 0.3s;
+}
+
+.formBx form input[type="submit"]:hover{
+    background: #046abe;
+}
+
+#feedback{
+    color: #fff;
+    font-size: 34px;
+    display: flex;
+    transition: all 0.3s;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 37px;
+    opacity: 0;
+}
+
+.copyright{
+    background: #000;
+    font-size: 14px;
+    color: #fff;
+    padding: 10px;
+}
+
+.copyright a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.copyright a:hover{
+    text-decoration: underline;
+}
+
+/* Media Queries */
+
+@media (max-width: 991px){
+    .header, .sticky{
+        padding: 20px 40px;
+        z-index: 10000;
+    }
+
+    .header .menu{
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        display: block;
+        padding: 100px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        transition: 0.5s;
+        z-index: 999;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .header .menu.active{
+        left: 0;
+    }
+
+    .header ul li a{
+        color: #111;
+        font-size: 24px;
+        margin: 10px;
+    }
+
+    .toggle{
+        width: 40px;
+        height: 40px;
+        background: url(../images/menu.png) no-repeat;
+        background-position: center;
+        background-size: 30px;
+        cursor: pointer;
+    }
+
+    .toggle.active{
+        width: 40px;
+        height: 40px;
+        background: url(../images/close.png) no-repeat;
+        background-position: center;
+        background-size: 30px;
+        cursor: pointer;
+    }
+
+    .sticky .toggle{
+        filter: invert(1);
+    }
+
+    section{
+        padding: 100px 50px;
+    }
+
+    .banner{
+        padding: 150px 50px 100px;
+    }
+
+    .banner h2{
+        font-size: 1em;
+    }
+
+    .heading h2{
+        font-size: 24px;
+    }
+
+    .contentBx h3{
+        font-size: 20px;
+    }
+
+    .content{
+        flex-direction: column;
+    }
+
+    .w50{
+        margin-bottom: 20px;
+    }
+
+    .services .content .serviceBx{
+        margin: 10px;
+    }
+
+    .work .content .workBx{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .testimonial .content .testimonialBx{
+        max-width: calc(100% - 20px);
+        padding: 40px 20px;
+        margin: 10px;
+    }
+
+    .testimonial .content .testimonialBx h3{
+        margin-top: 20px;
+    }
+
+    .contactInfo{
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 600px){
+    .header, .sticky{
+        padding: 20px 20px;
+    }
+
+    .banner{
+        padding: 150px 20px 100px;
+    }
+
+    section{
+        padding: 100px 20px;
+    }
+}
