@@ -29,6 +29,10 @@ form.addEventListener('submit', function (e) {
 
 
     let regex = /^([_\-\.0-9a-zA-Z]+)@([a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+    
+    if(grecaptcha.getResponse() == ""){
+        alert('Please check the captcha!')
+    }else{
 
     if (regex.test(emailval) === true && nameval.trim() !== '' && message.trim() !== '') {
         var link = "https://docs.google.com/forms/d/e/1FAIpQLSfnz5SRNGoGzBRG2mecELS-nbaa1t2gQsvHNoryfwoJ66Owyw/formResponse";
@@ -42,8 +46,9 @@ form.addEventListener('submit', function (e) {
         form.style.display = 'none';
         document.getElementById('feedback').style.opacity = '1';
     }else{
-        alert('Please enter correct details');
+        alert('Please enter correct details!');
     };
+}
 });
 
 $(function() {
