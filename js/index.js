@@ -1,8 +1,9 @@
 console.log('Loaded');
 
+
 window.addEventListener('scroll', function () {
     let header = document.querySelector('.header');
-    header.classList.toggle('sticky', window.scrollY > 0)
+    header.classList.toggle('sticky', window.scrollY > 0);
 });
 
 function toggleMenu() {
@@ -12,7 +13,7 @@ function toggleMenu() {
     menuToggle.classList.toggle('active');
 };
 
-let links = document.getElementsByTagName('li');
+let links = document.getElementsByTagName('a');
 
 for (let item of links) {
     item.addEventListener('click', toggleMenu);
@@ -29,7 +30,7 @@ form.addEventListener('submit', function (e) {
 
     let regex = /^([_\-\.0-9a-zA-Z]+)@([a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
 
-    if (regex.test(emailval) === true) {
+    if (regex.test(emailval) === true && nameval.trim() !== '' && message.trim() !== '') {
         var link = "https://docs.google.com/forms/d/e/1FAIpQLSfnz5SRNGoGzBRG2mecELS-nbaa1t2gQsvHNoryfwoJ66Owyw/formResponse";
         jQuery.ajax({
             url: link,
@@ -40,9 +41,9 @@ form.addEventListener('submit', function (e) {
         });
         form.style.display = 'none';
         document.getElementById('feedback').style.opacity = '1';
-    } else{
-        alert('Please enter a valid email');
-    }
+    }else{
+        alert('Please enter correct details');
+    };
 });
 
 $(function() {
