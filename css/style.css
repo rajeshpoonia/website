@@ -489,6 +489,12 @@ img{
         padding: 10px;
     }
 
+    .fb_iframe_widget{
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
     .testimonial .content .testimonialBx{
         max-width: calc(100% - 20px);
         padding: 40px 20px;
@@ -501,6 +507,10 @@ img{
 
     .contactInfo{
         margin: 20px 0;
+    }
+
+    #frame{
+        width: 500px;
     }
 }
 
@@ -515,5 +525,16 @@ img{
 
     section{
         padding: 100px 20px;
+    }
+}
+
+#frame{
+    height: 500px;
+    width: 400px;
+}
+
+@media (max-width: 400px){
+    #frame{
+        width: 250px;
     }
 }
