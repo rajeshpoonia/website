@@ -8,14 +8,14 @@ window.addEventListener('scroll', function () {
 function toggleMenu() {
     let menuToggle = document.querySelector('.toggle');
     let menu = document.querySelector('.menu');
-    menu.classList.toggle('active')
+    menu.classList.toggle('active');
     menuToggle.classList.toggle('active');
 };
 
-let links = document.getElementsByTagName('li')
+let links = document.getElementsByTagName('li');
 
 for (let item of links) {
-    item.addEventListener('click', toggleMenu)
+    item.addEventListener('click', toggleMenu);
 };
 
 let form = document.getElementById('form')
@@ -40,5 +40,20 @@ form.addEventListener('submit', function (e) {
         });
         form.style.display = 'none';
         document.getElementById('feedback').style.opacity = '1';
-    };
+    } else{
+        alert('Please enter a valid email');
+    }
+});
+
+$(function() {
+    $('a[href*=\\#]:not([href=\\#])').on('click', function() {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
+        if (target.length) {
+            $('html,body').animate({
+                scrollTop: target.offset().top
+            }, 'easeinExpo');
+            return false;
+        }
+    });
 });
