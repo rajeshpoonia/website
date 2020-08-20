@@ -94,6 +94,11 @@ section{
     padding: 100px;
 }
 
+img.resize{
+    max-width: 80%;
+}
+
+
 .banner{
     position: relative;
     min-height: 100vh;
