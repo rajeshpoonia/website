@@ -102,7 +102,7 @@ img.resize{
 .banner{
     position: relative;
     min-height: 100vh;
-    background: url(../images/banner.jpg);
+    background: #000;
     background-size: cover;
     background-position: right;
     display: flex;
